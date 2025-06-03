@@ -1,0 +1,15 @@
+{
+  "name": "tercera-pre-entrega-lopez-julian",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass public/scss/style.scss public/css/style.css --watch"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}

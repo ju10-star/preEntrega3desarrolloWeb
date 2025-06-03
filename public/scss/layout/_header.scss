@@ -1,0 +1,29 @@
+@use '../abstracts/variables';
+
+.navbar {
+  background-color: variables.$primary-color;
+  padding: 1rem;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list,
+  .nav-list2 {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

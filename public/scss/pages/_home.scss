@@ -1,0 +1,41 @@
+
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.portada {
+  text-align: center;
+  padding: 2rem;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: variables.$primary-color;
+    margin-bottom: 1rem;
+  }
+}
+
+.botonera {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.descripcion-bienvenida,
+.galeria-fotos,
+.clientes,
+.about-us {
+  padding: 2rem;
+  text-align: center;
+}
+
+.clientes ul {
+  list-style: none;
+  padding: 0;
+}
