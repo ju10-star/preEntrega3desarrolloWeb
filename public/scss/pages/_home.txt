@@ -1,0 +1,31 @@
+.portada {
+  text-align: center;
+  padding: 2rem;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: variables.$primary-color;
+    margin-top: -4rem;
+  }
+}
+
+.seccion-superior {
+  @include flex-center(2rem);
+  flex-wrap: wrap;
+
+  .contenedor-descripcion {
+    flex: 1 1 45%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    color: variables.$secondary-color;
+    border-radius: variables.$border-radius;
+    @include responsive-columns(2, 2rem);
+  }
+}

@@ -6,11 +6,8 @@
 @use 'base/typography';
 
 @use 'layout/header';
-@use 'layout/navbar';
 @use 'layout/footer';
 
 @use 'components/buttons';
-@use 'components/slider';
-@use 'components/modal';
 
 @use 'pages/home';

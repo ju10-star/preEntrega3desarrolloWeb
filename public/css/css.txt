@@ -1,0 +1,849 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../assets/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 80px;
+}
+
+/* Aplica que al body y al html para que ocupen toda la altura */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  overflow: visible;
+  background: linear-gradient(to flex-end, rgba(0, 0, 0, 0), black);
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* -- menu hamburguesa -- */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  z-index: 1100;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+  color: #fff;
+}
+
+/* -- nav-bar -- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.nav-left ul,
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links li a:hover {
+  color: red;
+}
+
+.nav-home {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-home li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* -- contenedor main -- */
+
+main.content {
+  padding: 2rem 1rem;
+  text-align: center;
+  flex: 1;
+  overflow: visible;
+}
+
+/* --PORTADA-- */
+
+.portada {
+  margin-top: -90px;
+}
+
+.portada img {
+ /* max-width: 80vw;  que el logo ocupe hasta 80% del ancho viewport */
+  height: auto;   /* mantener proporción */
+}
+
+/* -- Algunas fuentes -- */
+
+.roboto-mono-manser {
+  margin-top: -115px; /* Eliminar esta línea? */
+  /* transform: translateY(0px); */ /* Opcional */
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  text-shadow: 2px 2px 4px white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.roboto-mono-h2 {
+  margin-top: -1px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem; /* sube el margen vertical */
+  position: relative;
+}
+
+
+.btn {
+  background-color: #000000be;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1); /* aumenta tamaño en un 20% */
+  background-color: #a00f0faf;
+}
+
+
+/* Agrupa descripcion y slider una al lado de la otra */
+.seccion-superior {
+  display: flex;
+  flex-wrap: wrap; /* Se acomoda verticalmente en pantallas grandes */
+  justify-content: center;
+  /* align-items: flex-start; */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Estilos para descripcion */
+.contenedor-descripcion {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.719);
+  padding: 2rem;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  border-radius: 10px;
+
+  /* Distribuir en columnas automáticamente */
+  column-width: 15em; /* ajusta según sea necesario */
+  column-gap: 2rem;
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .contenedor-descripcion {
+    justify-content: center;
+    /* En pantallas pequeñas, mantener las columnas automáticas, o ajustar si quieres menos columnas */
+    /* Aquí puedes ajustar si quieres más control en pantallas pequeñas, por ejemplo: */
+    /* column-width: auto; */
+  }
+}
+
+/* Estilos para clientes y about us */
+
+.clientes {
+  flex: 1 1 45%;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4rem;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 95%;
+  margin-left: 2rem;
+}
+
+
+/* Clientes en dos columnas */
+.clientes ul {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .clientes ul {
+    columns: 1;
+    max-width: 95%;
+    margin-left: 2rem;
+  }
+}
+
+
+
+/* Estilos para slider */
+
+.slider {
+  flex: 1 1 45%;
+  max-width: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 0rem;
+}
+
+.galeria-clientes {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+
+.galeria-clientes img {
+  width: 200px; /* Ajustar segun diseño */
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Scroll horizontal para galería */
+
+.galeria-clientes::-webkit-scrollbar {
+  height: 6px;
+}
+.galeria-clientes::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+.galeria-clientes a {
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+
+
+.galeria-clientes img:hover {
+  transform: scale(1.05);
+}
+
+/*
+.galeria-clientes {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.galeria-clientes img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.2s;
+}
+
+.galeria-clientes img:hover {
+  transform: scale(1.05);
+}
+*/
+.modal-galeria {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+
+/* footer */
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem 6rem;
+  padding-bottom: 80px;
+  text-align: center;
+  margin-top: 0;
+  overflow: visible;
+  gap: 2rem;
+}
+
+/* Ajuste en .ico-footer */
+footer .ico-footer {
+  display: flex;
+  justify-content: start;
+  width: 60px;
+  height: auto;
+  margin: 0 25px;
+  /* Eliminé float */
+}
+
+/* Estilos para divs internos, si aplican */
+footer div {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+
+/* footer {
+  display: flex;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  text-align: left;
+  margin-top: 0;
+  overflow: visible;
+}
+
+
+footer .ico-footer {
+  display: flex;
+  justify-content: start;
+  float: right;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+footer .ico-footer {
+  width: 60px;
+  height: auto;
+  margin: 0;
+} */
+
+
+/* Footer responsivo 
+footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem 1rem 6rem;
+}
+
+footer div {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+} */
+
+
+
+/* Evitar que tape el footer */
+footer {
+  padding-bottom: 80px;
+}
+
+.close-btn {
+  display: none; /* Ocultar en pantallas grandes */
+}
+
+/* Submenú de Contacto (escritorio) */
+.contacto-dropdown {
+  position: relative;
+}
+
+.submenu-contacto {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 1050;
+  border-radius: 0 0 5px 5px;
+}
+
+.submenu-contacto li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu-contacto li a {
+  color: white;
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submenu-contacto li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar submenú al pasar el mouse */
+.contacto-dropdown:hover .submenu-contacto {
+  display: block;
+}
+
+/* Iconitos */
+.iconito {
+  width: 20px;
+  height: 20px;
+}
+
+/* Ícono de WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) { 
+  .whatsapp-float {
+    right: 30px;
+  }
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1); /* aumenta tamaño en un 20% */
+}
+
+.whatsapp-float img {
+  width: 48px;
+  height: 48px;
+}
+
+
+
+/* Responsive */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+   body {
+    background-size: cover; /* Cover en vez contain para evitar espacios blancos */
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* altura mínima para ocupar toda la pantalla */
+  }
+
+  .portada {
+    margin-top: 0;
+  }
+
+  .portada img {
+    max-width: 70vw;   /* máximo 80% del ancho de la ventana */
+    height: auto;      /* para mantener proporciones */
+    display: block;
+    margin: 0 auto;    /* centrar imagen */
+  }
+
+  .roboto-mono-manser {
+    margin-top: 0;
+    transform: translateY(0);    /* elimina el desplazamiento vertical */
+    font-size: 5vw;              /* tamaño proporcional al ancho */
+    padding: 0 1rem;             /* un poco de padding para no pegar al borde */
+    text-align: center;
+  }
+
+  .roboto-mono-h2 {
+    transform: translateY(0);   /* elimina el desplazamiento vertical */
+    font-size: 3vw;              /* tamaño proporcional al ancho */
+    padding: 0 1rem;             /* un poco de padding para no pegar al borde */
+    text-align: center;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    width: 50%;
+  }
+
+  .button-group {
+    margin-top: 3rem; /* subir el margen para separar del contenido anterior */
+  } 
+
+
+  .slider, .contenedor-descripcion {
+    max-width: 90%;
+  }
+
+  .solo-escritorio {
+    display: none;
+  }
+
+  .seccion-superior {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clientes {
+    display: block;
+    align-items: center;
+    padding: 2rem 4rem;
+    margin: 0;
+    flex-direction: column;
+    max-width: 80%;
+    border-radius: 0;
+    max-width: 95%;
+  }
+
+  .galeria-clientes {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .galeria-clientes img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .close {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  .nav-buttons button {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+
+  /*.about-us {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    background-size: cover;
+    /* flex-direction: column; Los elementos en columna en pantallas pequeñas 
+    gap: 1rem;
+    max-height: 100px;
+  }
+
+  .about-us {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+  }*/
+
+
+
+  .nav-icons-mobile .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-icons-mobile .icons a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .submenu-contacto {
+    position: static !important;  /* forzar posición estática */
+    display: block !important;    /* que siempre esté visible dentro del menú hamburguesa */
+    background: transparent !important;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .submenu-contacto li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .submenu-contacto li:last-child {
+    border-bottom: none;
+  }
+
+  .submenu-contacto li a {
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .contacto-dropdown:hover .submenu-contacto {
+    display: none; /* desactivar hover en mobile */
+  }
+
+
+/*.about-us {
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.about-us .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* o column si querés vertical en móviles */
+  /*flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100%;
+  height: auto;
+}*/
+
+  /*.about-us .icons img,
+  .about-us .icons i,
+  .about-us .icons svg {
+    max-width: 48px;
+    max-height: 48px;
+    width: auto;
+    height: auto;
+  }*/
+
+
+  footer {
+    margin-top: 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  footer .ico-footer {
+    margin: 0;
+    gap: 2rem;
+  }
+
+  /* Mostrar ícono hamburguesa */
+  .hamburger {
+    display: block;
+  }
+
+  /* Menú deslizable tipo sidebar */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #007bff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    transform: translateX(100%);
+  }
+
+  /* Menú visible */
+  .nav-links.show {
+    transform: translateX(0);
+  }
+
+  /* Ítems del menú */
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  /* Botón de cerrar (X) */
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    display: block; /* Mostrar botón cerrar solo en móvil */
+  }
+
+  /* Overlay oscuro */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Overlay visible */
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 100px;
+  }
+}

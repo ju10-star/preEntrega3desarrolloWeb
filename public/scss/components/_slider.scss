@@ -1,0 +1,96 @@
+/* Estilos para el slider de testimonios */ 
+
+/* Estilos para slider */
+
+.slider {
+  flex: 1 1 45%;
+  max-width: 50%;
+  height: 335px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: row;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 0rem;
+}
+
+
+
+.galeria-clientes {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 220px;
+
+  img {
+    width: 200px !important;
+    height: 200px !important;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+}
+
+
+
+/* Scroll horizontal para galería */
+
+.galeria-clientes::-webkit-scrollbar {
+  height: 6px;
+}
+
+
+.galeria-clientes::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+
+
+.galeria-clientes a {
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+
+
+
+
+.galeria-clientes img:hover {
+  transform: scale(1.05);
+}
+
+.galeria-clientes a:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

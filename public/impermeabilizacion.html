@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrupoManser</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+
+  <header>
+    <h1></h1>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-home">
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="gas_industrial.html">Gas Industrial</a></li>
+          <li><a href="servicio_integral.html">Obra Pública</a></li>
+          <div class="solo-escritorio">
+            <li class="contacto-dropdown">
+                <a href="#">Contacto</a>
+                <ul class="submenu-contacto">
+                    <li><a href="https://wa.me/1123885574" target="_blank">
+                        <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" class="iconito"> WhatsApp
+                    </a></li>
+                    <li><a href="mailto:manser@zazusrl.com.ar">
+                        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="Gmail" class="iconito"> Gmail
+                    </a></li>
+                </ul>
+            </li>
+          </div>
+          <li><button id="close-btn" class="close-btn" aria-label="Cerrar menú">&times;</button></li>
+        </ul>
+        <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú de navegación" tabindex="0">&#9776;</div>
+        <div class="overlay" id="overlay"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <!-- SECCIÓN PORTADA -->
+    <div class="portada">
+      <img src="assets/grupomanser.png" alt="Logo Grupo Manser" />
+      <h1 class="roboto-mono-manser">Servicio de Impermeabilización</h1>
+      <div class="button-group">
+        <a href="gas_industrial.html" class="btn">Gas industrial</a>
+        <a href="servicio_integral.html" class="btn">Obra Pública</a>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DESCRIPCIÓN + SLIDER -->
+    <div class="seccion-superior">
+        <div class="contenedor-descripcion">
+            <p>
+                Instalamos servicios de gas industrializado,<br>
+                nuestro sociedad se compromete con el personal mejor capacitado<br>
+                para instalar y resolver cualquier necesidad que presente su empresa,<br>
+                institución o infraestructura.<br>
+                Planta de regulación primaria y secundaria<br>
+                Planta de medición<br>
+                Instalaciones comerciales/ gastronómicas<br> 
+                (bancos, hipermercados, locales gastronómicos,shoppings)<br>
+                Instalaciones de gas industrial (laboratorios, fábricas)<br>
+                Instalaciones Entidades públicas (escuelas,..)<br>
+            </p>
+        </div>
+        <!-- SECCIÓN CLIENTES -->
+        <section class="slider">
+            <h2 style="color: white;">Obras Realizadas</h2>
+            <div class="galeria-clientes">
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto1.jpg"><img src="assets/ZAZU-IMG/foto1.jpg" alt="Cliente 1" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto2.jpg"><img src="assets/ZAZU-IMG/foto2.jpg" alt="Cliente 2" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto3.jpg"><img src="assets/ZAZU-IMG/foto3.jpg" alt="Cliente 3" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto4.jpg"><img src="assets/ZAZU-IMG/foto4.jpg" alt="Cliente 4" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto5.jpg"><img src="assets/ZAZU-IMG/foto5.jpg" alt="Cliente 5" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto6.jpg"><img src="assets/ZAZU-IMG/foto6.jpg" alt="Cliente 6" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto7.jpg"><img src="assets/ZAZU-IMG/foto7.jpg" alt="Cliente 7" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto8.jpg"><img src="assets/ZAZU-IMG/foto8.jpg" alt="Cliente 8" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto9.jpg"><img src="assets/ZAZU-IMG/foto9.jpg" alt="Cliente 9" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto10.jpg"><img src="assets/ZAZU-IMG/foto10.jpg" alt="Cliente 10" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto11.jpg"><img src="assets/ZAZU-IMG/foto11.jpg" alt="Cliente 4" /></a>
+            </div>
+        </section>
+    </div>
+    <div class="clientes">
+        <h2>Clientes</h2>
+        <ul class="clientes-content">
+            <li>Banco provincia Sucursal La Plata: instalación completa de gas de toda la sucursal.</li>
+            <li>Instalación en laboratorio IBC Ituzaingo: alimentación de panta hionifinizadora consumo 1.000.000 de m3/h.</li>
+            <li>Colegios SEYMA: Escuela N°1 de Moreno, Escuela primaria N°67, Escuela N°65… (Cesar tiene que buscar escuelas fueron como 17)</li>
+            <li>Ministerio de cultura y educación de CABA: Planetario de la nación en conjunto con la empresa Dragonair S.A.</li>
+            <li>Lo del Francés Resto/ Bar Santelmo</li>
+            <li>Aldos Resto/ Bar (corroborar info)</li>
+            <li>Hotel (Arevalo 2020 buscarlo nombre onda “brisa del sur”)</li>
+            <li>Up Town (ex Nicky): trabajo en subsuelo.</li>
+            <li>COTO: Sucursal N°129 3 plantas reguladoras de subestación de regulación, instalación bajo campana para área rotisería alimentando 8 artefactos, panadería…; y Sucursal N°78 instalación de gas bajo campana para 4 artefactos y bajo campana para 2 en otro sector.</li>
+            <li>Barrio de 200 viviendas</li>
+        </ul>
+        <ul class="ul"></ul>
+    </div>
+  </main>
+  <!-- SECCIÓN SOBRE NOSOTROS 
+  <section class="about-us">
+    <div class="contacto">
+        <p>About Us:</p>
+    </div>
+    <p style="font-family: Arial, Helvetica, sans-serif;">contactanos via: </p>
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="G-Mail">
+    </div>
+    <p class="p">manser@zazusrl.com.ar</p>
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/zazuicon2.ico" alt="ZAZU">
+    </div>
+  </section>-->
+  <footer>
+    <p>&copy; Grupo Manser</p>
+    <!--<div class="contacto">
+        <p></p>
+    </div>-->
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/zazuicon2.ico" alt="ZAZU">
+        <img src="assets/icons-gmail-wap/sicIcon.ico" alt="SIC">
+    </div>
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="G-Mail">
+    </div>
+    <p class="email-footer">manser@zazusrl.com.ar</p>
+    <!--<div>
+      <img src="assets/cotoLogo.ico" alt="Coto" class="ico-footer">
+      <img src="assets/bancoProvinciaLogo.ico" alt="Banco Provincia" class="ico-footer">
+      <img src="assets/ibcLogo.ico" alt="IBC" class="ico-footer">  
+    </div>-->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/script.js"></script>
+
+  <a href="https://wa.me/5491123885574" class="whatsapp-float" target="_blank">
+    <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>

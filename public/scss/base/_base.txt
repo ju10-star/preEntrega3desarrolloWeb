@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// filepath: c:\Users\n_lom\OneDrive\Escritorio\tercera-pre-entrega-LopezJulian\public\scss\base\_base.scss
+html, body {
+  height: 100%;
+  font-family: variables.$font-family-main;
+  line-height: variables.$line-height-base;
+  background-image: url("../assets/image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+}

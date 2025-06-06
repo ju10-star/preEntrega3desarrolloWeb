@@ -1,0 +1,114 @@
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("close-btn");
+
+function toggleMenu() {
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  hamburger.classList.toggle("active");
+}
+
+// Abrir/cerrar menú con click en hamburguesa
+hamburger.addEventListener("click", toggleMenu);
+
+// Abrir/cerrar menú con teclado (Enter y espacio) en hamburguesa
+hamburger.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    toggleMenu();
+  }
+});
+
+// Cerrar menú con click en overlay
+overlay.addEventListener("click", toggleMenu);
+
+// Cerrar menú con botón "X"
+closeBtn.addEventListener("click", toggleMenu);
+
+// Cerrar menú al hacer click en un enlace
+const navItems = navLinks.querySelectorAll("li a");
+
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (navLinks.classList.contains("show")) {
+      toggleMenu();
+    }
+  });
+});
+
+//fancyboy5
+document.addEventListener("DOMContentLoaded", function () {
+  Fancybox.bind("[data-fancybox='slider']", {
+    // Opciones personalizadas (opcional)
+    Thumbs: {
+      autoStart: true,
+    },
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactoDropdown = document.querySelector(".contacto-dropdown");
+  const navLinks = document.querySelector(".nav-links");
+
+  // Creamos el contenedor para el menú hamburguesa
+  const navContactoMobile = document.createElement("li");
+  navContactoMobile.classList.add("nav-contacto-mobile");
+
+  function updateContactoLocation() {
+    if (window.innerWidth <= 768) {
+      if (contactoDropdown && !navContactoMobile.contains(contactoDropdown)) {
+        navContactoMobile.appendChild(contactoDropdown);
+        navLinks.appendChild(navContactoMobile);
+      }
+    } else {
+      const originalParent = document.querySelector(".nav-contacto-original"); // lo definimos abajo
+      if (contactoDropdown && !originalParent.contains(contactoDropdown)) {
+        originalParent.appendChild(contactoDropdown);
+        if (navContactoMobile.parentNode) {
+          navContactoMobile.parentNode.removeChild(navContactoMobile);
+        }
+      }
+    }
+  }
+
+  // Ejecutar al cargar
+  updateContactoLocation();
+
+  // Ejecutar al redimensionar
+  window.addEventListener("resize", updateContactoLocation);
+});
+
+function scrollSlider(direction) {
+  const slider = document.querySelector('.galeria-clientes');
+  const scrollAmount = 220; // Ajuste al ancho de imagen + gap
+
+  slider.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
+
+  whatsappLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    const baseUrl = "https://wa.me/";
+    const phoneNumber = href.replace(baseUrl, "");
+
+    // Si tiene 10 dígitos, le agregamos el prefijo 549
+    if (/^\d{10}$/.test(phoneNumber)) {
+      link.setAttribute("href", baseUrl + "549" + phoneNumber);
+    }
+
+    // Si tiene + pero sin 549, también lo corregimos
+    if (/^\+?\d{9,10}$/.test(phoneNumber)) {
+      link.setAttribute("href", baseUrl + "549" + phoneNumber);
+    }
+  });
+});

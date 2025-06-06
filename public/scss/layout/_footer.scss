@@ -1,10 +1,121 @@
-
-@use '../abstracts/variables';
-
-.footer {
-  background-color: variables.$primary-color;
-  color: white;
+footer {
+  margin-top: 2rem; // Separación entre el footer y su elemento anterior
+  display: flex;
+  flex-direction: row; // Por defecto en pantallas pequeñas
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+  color: white; // Textos en blanco
+  background-color: rgba(0, 0, 0, 0.8); // Fondo más oscuro para mayor contraste
+  padding: 1.5rem 1rem; // Reducir altura del footer
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  row-gap: 3rem; // Espacio entre filas de íconos
+  width: 100%; // Asegurar que el footer ocupe todo el ancho
+  // position: relative; Para permitir el uso de pseudo-elementos si es necesario
+  div {
+    display: flex;
+    flex-wrap: wrap; //  los íconos se ajustan en pantallas pequeñas
+    flex-direction: row; // Mantener los íconos en fila
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left; // Alinear texto a la izquierda
+    margin: 0; // Eliminar margen para evitar desbordamiento
+  }
+  
+
+  
+
+  .ico-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: auto;
+    gap: 1.5rem; // Reducir espacio entre íconos
+    margin: 0;
+
+    a {
+      color: rgb(255, 255, 255); // Textos en blanco
+      text-decoration: none;
+
+      &:hover {
+        color: #007bff;
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: #0056b3;
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+
+        img {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row; // Elementos en fila para pantallas desktop
+    justify-content: center;
+    padding: 1.5rem 1rem; // Reducir altura del footer en desktop
+  }
+
+  .ico-footer {
+    margin: 0 20px; // Reducir espacio entre íconos en desktop
+  }
+
+  div {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; // Elementos en columna para pantallas pequeñas
+    gap: 1rem;
+    padding-bottom: 50px; // Reducir altura del footer en pantallas pequeñas
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1rem; // Reduce el padding en pantallas muy pequeñas
+  }
+
+  .ico-footer {
+    width: 100%; // Asegura que los íconos ocupen todo el ancho
+    justify-content: center;
+    gap: 1rem;
+  }
 }

@@ -1,12 +1,60 @@
+// Mixin para botones
+@mixin button-style {
+  background-color: $btn-bg-color;
+  color: $white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: $box-radius;
+  transition: background-color 0.3s ease;
 
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == small {
-    @media (max-width: 576px) { @content; }
+  &:hover {
+    transform: scale(1.1);
+    background-color: $btn-hover-bg-color;
   }
-  @else if $breakpoint == medium {
-    @media (max-width: 768px) { @content; }
+}
+
+// Mixin para flex-center
+@mixin flex-center($gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex-center2($gap: 0) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin responsive($min-width: null, $max-width: null) {
+  @if $min-width and $max-width {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  } @else if $max-width {
+    @media (max-width: $max-width) {
+      @content;
+    }
+  } @else if $min-width {
+    @media (min-width: $min-width) {
+      @content;
+    }
   }
-  @else if $breakpoint == large {
-    @media (max-width: 1024px) { @content; }
+}
+
+
+@mixin button-style($padding: 1rem 2rem, $font-size: 2rem, $width: auto) {
+  padding: $padding;
+  font-size: $font-size;
+  width: $width;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
   }
 }

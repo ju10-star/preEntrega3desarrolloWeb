@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrupoManser</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+
+  <header>
+    <h1></h1>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-home">
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="impermeabilizacion.html">Impermeabilizaciones</a></li>
+          <li><a href="gas_industrial.html">Gas industrial</a></li>
+          <div class="solo-escritorio">
+            <li class="contacto-dropdown">
+                <a href="#">Contacto</a>
+                <ul class="submenu-contacto">
+                    <li><a href="https://wa.me/1123885574" target="_blank">
+                        <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" class="iconito"> WhatsApp
+                    </a></li>
+                    <li><a href="mailto:manser@zazusrl.com.ar">
+                        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="Gmail" class="iconito"> Gmail
+                    </a></li>
+                </ul>
+            </li>
+          </div>
+          <li><button id="close-btn" class="close-btn" aria-label="Cerrar menú">&times;</button></li>
+        </ul>
+        <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú de navegación" tabindex="0">&#9776;</div>
+        <div class="overlay" id="overlay"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <!-- SECCIÓN PORTADA -->
+    <div class="portada">
+      <img src="assets/grupomanser.png" alt="Logo Grupo Manser" />
+      <h1 class="roboto-mono-manser">Servicio de Obra Pública</h1>
+      <div class="button-group">
+        <a href="impermeabilizacion.html" class="btn">Impermeabilizaciones</a>
+        <a href="gas_industrial.html" class="btn">Gas industrial</a>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DESCRIPCIÓN + SLIDER -->
+    <div class="seccion-superior">
+        <div class="contenedor-descripcion">
+            <p>
+                Ofrecemos soluciones integrales en obras públicas y servicios especializados,<br>
+                comprometidos con la calidad y la eficiencia.<br> 
+                Nuestro equipo altamente capacitado realiza desde el control<br>
+                y ejecución de proyectos de infraestructura hasta instalaciones complejas,<br>
+                garantizando que cada obra cumpla con los estándares técnicos y de seguridad.<br>
+                Capacidad para gestionar y ejecutar obras de gran escala,<br>
+                como túneles, obras viales, edificios públicos y ampliaciones hospitalarias,<br>
+                siempre enfocados en la satisfacción del cliente y el respeto por los plazos y recursos.<br>
+            </p>
+        </div>
+        <!-- SECCIÓN CLIENTES -->
+        <section class="slider">
+            <h2 style="color: white;">Obras Realizadas</h2>
+            <div class="galeria-clientes">
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto1.jpg"><img src="assets/ZAZU-IMG/foto1.jpg" alt="Cliente 1" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto2.jpg"><img src="assets/ZAZU-IMG/foto2.jpg" alt="Cliente 2" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto3.jpg"><img src="assets/ZAZU-IMG/foto3.jpg" alt="Cliente 3" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto4.jpg"><img src="assets/ZAZU-IMG/foto4.jpg" alt="Cliente 4" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto5.jpg"><img src="assets/ZAZU-IMG/foto5.jpg" alt="Cliente 5" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto6.jpg"><img src="assets/ZAZU-IMG/foto6.jpg" alt="Cliente 6" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto7.jpg"><img src="assets/ZAZU-IMG/foto7.jpg" alt="Cliente 7" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto8.jpg"><img src="assets/ZAZU-IMG/foto8.jpg" alt="Cliente 8" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto9.jpg"><img src="assets/ZAZU-IMG/foto9.jpg" alt="Cliente 9" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto10.jpg"><img src="assets/ZAZU-IMG/foto10.jpg" alt="Cliente 10" /></a>
+                <a data-fancybox="slider" href="assets/ZAZU-IMG/foto11.jpg"><img src="assets/ZAZU-IMG/foto11.jpg" alt="Cliente 4" /></a>
+            </div>
+        </section>
+    </div>
+    <div class="clientes">
+        <h2>Clientes</h2>
+        <ul class="clientes-content">
+            <li>Museo de Malvinas (etapa hormigón) Caputo-Ses Ute.</li>
+            <li>Guardia Auxiliar 103 Emergencias -Vidogar</li>
+            <li>Torre Lafuente 64 - ivc - Vidogar</li>
+            <li>Forum alcorta oficina de venta TGLT</li>
+            <li>Centenera 1468 vivienda Unifamiliar</li>
+            <li>Kimberly Clark - San Lucas construcciones</li>
+            <li>Torre Bernal – Albañileria y Hormigon</li>
+            <li>Torres Zerena barrio el palmar</li>
+            <li>Túneles bajo nivel Calle Besares</li>
+            <li>Tuneles bajo nivel Calle Ibera</li>
+            <li>Hotel Alvear - Puerto Madero - Pellegrinet</li>
+            <li>Hotel Alvear - Suipacha - Pellegrinet</li>
+            <li>Correo central (hormigón) Riva - Esuco</li>
+            <li>Mansilla 2531 edificio 2.600m2</li>
+            <li>Mendoza 2962 edificio 2700m2</li>
+            <li>Donato Alvarez y Bogota - edificio 1200m2</li>
+            <li>Escuela nro 8 - Remodelación</li>
+            <li>Escuela nro 17 - Remodelación</li>
+            <li>Hospital Thompson - Ampliación</li>
+            <li>Municipalidad de Ituzaingo</li>
+            <li>Oficinas Osdop - Albañilería</li>
+            <li>Galería comercial - llave en mano - Avellaneda</li>
+            <li>Banco Provincia - Remodelación Ituzaingo</li>
+            <li>Vivienda Nordelta Barrio San Marco llave en mano.</li>
+            <li>Vivienda duplex Saavedra 500m2</li>
+            <li>Hotel Hilton Pilar (hormigón)</li>
+            <li>Metrobus Norte Cabildo 6 estaciones</li>
+            <li>Hospital Cecilia Grierson Hormigón</li>
+            <li>Banco Provincia La Plata Remodelación</li>
+            <li>Banco Provincia Valentín Alaina Remodelación.</li>
+            <li>Obra Balbin 3741 hormigón y albañilería</li>
+            <li>Obra vivienda Citibell Módulo XI</li>
+        </ul>
+        <ul class="ul">
+            <li>Destacamento Policía Metropolitana Plaza Virreyes.</li>
+            <li>Supermercado Coto Merlo (hormigón y albañilería)</li>
+            <li>Asfalto Calle Juan XXIII</li>
+            <li>Cafetería Local llave en mano Nac Time</li>
+            <li>Colegio EEP 4 San Isidro (remodelaciones y pintura)</li>
+            <li>Colegio Bernardino Bernasconi CABA Reformas y pintura</li>
+            <li>Colegio Riobamba 623 Cancha de Hokey nueva y pintura</li>
+            <li>Colegio Carlos Calvo 3170 Pintura completa</li>
+            <li>Hospital Prof. Bernardo Houssay Pintura</li>
+            <li>Colegio Cabrera 3430 caba Pintura</li>
+            <li>Colegio Ecuador 1158 caba Sanitarios nuevos</li>
+            <li>Colegio Paraguay 1950 caba Pintura</li>
+            <li>Colegio Peña 2670 caba Pintura</li>
+            <li>Colegio Las heras 3086 caba Pintura</li>
+            <li>Colegio Dean Funes 1821 caba Pintura</li>
+            <li>Colegio Amancio Alcorta 1934 caba Pintura</li>
+            <li>Colegio Ayacucho 1670 caba Pintura</li>
+            <li>Colegio Salom 332 caba Pintura</li>
+            <li>Hospital Sarda caba Pintura</li>
+            <li>Colegio Caseros 2152 Pintura y remodelaciones varias</li>
+            <li>Colegio Cortejarana 3350 caba Pintura y remodelaciones varias</li>
+            <li>Vivienda Haras de Santa Maria 400m2</li>
+            <li>Vivienda Haras de Santa Maria 180m2</li>
+            <li>Remodelacion Baños 1, 2 y 3 er piso internación Hospital Houssay Vicente lopez</li>
+            <li>Nueva Sala Terapia Intensiva Hospital Houssay Vicente lopez</li>
+            <li>Supermercados Coto (caba y provincia) Instalaciones Gas, impermeabilizaciones.</li>
+        </ul>
+    </div>
+  </main>
+  <footer>
+    <p class="p2">&copy; Grupo Manser</p>
+    <!--<div class="contacto">
+        <p></p>
+    </div>-->
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/zazuicon2.ico" alt="ZAZU">
+        <img src="assets/icons-gmail-wap/sicIcon.ico" alt="SIC">
+    </div>
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="G-Mail">
+    </div>
+    <p class="email-footer">manser@zazusrl.com.ar</p>
+    <!--<div>
+      <img src="assets/cotoLogo.ico" alt="Coto" class="ico-footer">
+      <img src="assets/bancoProvinciaLogo.ico" alt="Banco Provincia" class="ico-footer">
+      <img src="assets/ibcLogo.ico" alt="IBC" class="ico-footer">  
+    </div>-->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/script.js"></script>
+
+  <a href="https://wa.me/5491123885574" class="whatsapp-float" target="_blank">
+    <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>

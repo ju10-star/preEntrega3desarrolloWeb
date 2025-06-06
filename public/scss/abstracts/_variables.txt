@@ -1,0 +1,7 @@
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$background-color: #f0f0f0;
+$font-family-main: 'Arial', sans-serif;
+$line-height-base: 1.6;
+$border-radius: 10px;
+$transition-duration: 0.3s;

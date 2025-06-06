@@ -1,0 +1,14 @@
+@mixin flex-center($gap: 1rem) {
+  display: flex;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin responsive-columns($columns: 2, $gap: 2rem) {
+  columns: $columns;
+  column-gap: $gap;
+
+  @media (max-width: 768px) {
+    columns: 1;
+  }
+}

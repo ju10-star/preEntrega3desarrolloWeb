@@ -3,69 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Proyecto Sass</title>
+  <title>GrupoManser</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 <body>
 
-  <!-- HEADER NAVBAR -->
-  <header class="navbar">
-    <nav class="nav-container">
-      <ul class="nav-list">
-        <li><a href="#inicio">Inicio</a></li>
-      </ul>
-      <ul class="nav-list2">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+  <header>
+    <h1></h1>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-home">
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">servicios</a></li>
+          <div class="solo-escritorio">
+            <li class="contacto-dropdown">
+                <a href="#">Contacto</a>
+                <ul class="submenu-contacto">
+                    <li><a href="https://wa.me/1123885574" target="_blank">
+                        <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" class="iconito"> WhatsApp
+                    </a></li>
+                    <li><a href="mailto:manser@zazusrl.com.ar">
+                        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="Gmail" class="iconito"> Gmail
+                    </a></li>
+                </ul>
+            </li>
+          </div>
+          <li><button id="close-btn" class="close-btn" aria-label="Cerrar menú">&times;</button></li>
+        </ul>
+        <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú de navegación" tabindex="0">&#9776;</div>
+        <div class="overlay" id="overlay"></div>
+      </div>
     </nav>
   </header>
 
-  <!-- PORTADA -->
-  <section class="portada" id="inicio">
-    <img src="assets/grupomanser.png" alt="Imagen de portada" />
-    <h1>Construimos, Instalamos, Protegemos.</h1>
-  </section>
+  <main class="content">
+    <div class="portada">
+      <img src="assets/grupomanser.png" alt="Logo Grupo Manser" />
+      <h1 class="roboto-mono-manser">mantenimiento y servicios</h1>
+      <h2 class="roboto-mono-h2">“Construimos, instalamos, protegemos. <br>Grupo Manser, infraestructura con confianza.”</h2>
+      <div class="button-group">
+        <a href="impermeabilizacion.html" class="btn">impermeablizaciones</a>
+        <a href="gas_industrial.html" class="btn">Instalaciones de gas industrial</a>
+        <a href="servicio_integral.html" class="btn">Obra Pública</a>
+      </div>
+    </div>
 
-  <!-- BOTONES PRINCIPALES -->
-  <section class="botonera">
-    <button onclick="location.href='#'">Botón Uno</button>
-    <button onclick="location.href='#'">Botón Dos</button>
-    <button onclick="location.href='#'">Botón Tres</button>
-  </section>
-
-  <!-- SECCIÓN DESCRIPTIVA  -->
-  <section class="descripcion-bienvenida">
-    <h2>Bienvenido a nuestro sitio</h2>
-    <p>Servicio de instalacion de obra civil</p>
-  </section>
-
-  <!-- SECCIÓN SLIDER / GALERÍA -->
-  <section class="galeria-fotos">
-    <h2>Galería</h2>
-    <p>Espacio galería de imágenes slider.</p>
-  </section>
-
-  <!-- SECCIÓN CLIENTES -->
-  <section class="clientes">
-    <h2>Nuestros Clientes, Garantía De Confianza.</h2>
-    <ul>
-      <li>Cliente 1</li>
-      <li>Cliente 2</li>
-      <li>Cliente 3</li>
-    </ul>
-  </section>
-
-  <!-- SECCIÓN ABOUT US -->
-  <section class="about-us">
-    <h2>Sobre Nosotros</h2>
-    <p></p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>contatanos via.</p>
+  </main>
+  <footer>
+    <p class="p2">&copy; Grupo Manser</p>
+    <!--<div class="contacto">
+        <p></p>
+    </div>-->
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/zazuicon2.ico" alt="ZAZU">
+        <img src="assets/icons-gmail-wap/sicIcon.ico" alt="SIC">
+    </div>
+    <div class="icons">
+        <img src="assets/icons-gmail-wap/gmail-icon.ico" alt="G-Mail">
+    </div>
+    <p class="email-footer">manser@zazusrl.com.ar</p>
+    <!--<div>
+      <img src="assets/cotoLogo.ico" alt="Coto" class="ico-footer">
+      <img src="assets/bancoProvinciaLogo.ico" alt="Banco Provincia" class="ico-footer">
+      <img src="assets/ibcLogo.ico" alt="IBC" class="ico-footer">  
+    </div>-->
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/script.js"></script>
+
+  <a href="https://wa.me/5491123885574" class="whatsapp-float" target="_blank">
+    <img src="assets/icons-gmail-wap/wappicon.ico" alt="WhatsApp" />
+  </a>
 
 </body>
 </html>
